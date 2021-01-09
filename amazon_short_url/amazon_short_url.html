@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>title</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <p>商品ページのURL</p>
+        <textarea id="orig_url" rows="10" cols="100" oninput="shortenUrl()"></textarea>
+
+        <p>短縮URL</p>
+        <div id="short_url" size="50" readonly></div>
+        <button onclick="copy()">クリップボードにコピー</button>
+        <div id="notify">コピーしました</div>
+    </body>
+</html>
