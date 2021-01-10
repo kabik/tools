@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - static_sites/*
+      - static_sites/**
 
 jobs:
   deploy:
