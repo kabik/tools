@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-  paths:
-      - static_sites
+    paths:
+      - static_sites/*
 
 jobs:
   deploy:
