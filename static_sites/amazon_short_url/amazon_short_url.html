@@ -11,7 +11,9 @@
         <textarea id="orig_url" rows="10" cols="100" oninput="shortenUrl()"></textarea>
 
         <p>短縮URL</p>
-        <div id="short_url" size="50" readonly></div>
+        <div id="short_url_wrapper" size="50" readonly>
+            <a id="short_url" target="_brank"></a>
+        </div>
         <button onclick="copy()">クリップボードにコピー</button>
         <div id="notify">コピーしました</div>
     </body>
