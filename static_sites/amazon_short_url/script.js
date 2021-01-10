@@ -1,6 +1,10 @@
 const TOP_URL = "https://www.amazon.co.jp"
 
-function getShortUrl() {
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("orig_url").focus()
+});
+
+const getShortUrl = () => {
     let origUrl = document.getElementById("orig_url").value
     let dp = origUrl.match("/dp/[a-zA-Z0-9]*/")
     let gp = origUrl.match("/gp/product/[a-zA-Z0-9]*/")
@@ -12,16 +16,16 @@ function getShortUrl() {
     }
 }
 
-function shortenUrl() {
+const shortenUrl = () => {
     let shortUrl = getShortUrl()
     let target = document.getElementById("short_url")
     target.href = shortUrl
     target.innerHTML = shortUrl
 }
 
-function copy() {
+const copy = () => {
     let notifyTarget = document.getElementById("notify")
-    const copyTarget = document.querySelector('#short_url')
+    let copyTarget = document.querySelector('#short_url')
 
     document.getSelection().selectAllChildren(copyTarget)
     document.execCommand("copy")
