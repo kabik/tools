@@ -3,7 +3,9 @@ name: Upload static web sites
 on:
   push:
     branches:
-    - master
+      - master
+  paths:
+      - static_sites
 
 jobs:
   deploy:
