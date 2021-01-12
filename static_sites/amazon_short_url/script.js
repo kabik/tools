@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const getShortUrl = () => {
     let origUrl = document.getElementById("orig_url").value
     let dp = origUrl.match("/dp/[a-zA-Z0-9]*/")
-    let gp = origUrl.match("/gp/product/[a-zA-Z0-9]*/")
+    let gp = origUrl.match("/gp/product/[a-zA-Z0-9]*/\?")
 
     if (dp) {
         return TOP_URL + dp[0]
