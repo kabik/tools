@@ -9,7 +9,7 @@ docker-compose up -d
 
 ## コンテナの中に入る
 ```
-docker exec -it {} ash
+docker exec -it <container_name> ash
 ```
 
 ## コンテナを止める
