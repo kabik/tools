@@ -1,0 +1,3 @@
+[vms]
+devel ansible_connection=local
+devel2 ansible_connection=local
