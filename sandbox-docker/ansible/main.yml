@@ -1,0 +1,12 @@
+- hosts: localhost
+  connection: localhost
+  tasks:
+    - name: test test
+      shell: |
+        echo '{"key1": 1, "key2": 2}'
+      register: hoge
+
+    - set_fact:
+        f: "{{ hoge.stdout }}"
+
+    - debug: msg="'{{ ( hoge.stdout | from_json).key1 }}'"
