@@ -1,8 +1,10 @@
 <template>
   <div class="game-cell"
-    @click="$emit('clik')"
     :style="{
-      backgroundColor: owner === 'red' ? `red` : 'blue'
+      backgroundColor: isAlive ? 'green' : 'lime',
+      display: 'table-cell',
+      height: '5px',
+      width: '5px'
     }"
   >
   </div>
@@ -11,7 +13,14 @@
 <script>
 export default {
   props: {
-    owner: { type: String }
+    //isAlive: { type: Boolean }
+  },
+  data () {
+    return {
+      isAlive: Math.random() < 1/3
+    }
+  },
+  computed: {
   }
 }
 </script>
